@@ -28,9 +28,8 @@ set(TARGET efm32-test)
 project(${TARGET} C CXX ASM)
 
 # Set device
-if(NOT DEVICE)
 set(DEVICE EFM32TG840F32)
-endif()
+
 
 # Set build
 if(NOT CMAKE_BUILD_TYPE)
@@ -51,7 +50,9 @@ include(${BASE_LOCATION}/toolchain/efm32-base.cmake)
 include_directories(${BASE_LOCATION}/include)
 
 
+# Subpprojects
 add_subdirectory("source/blink/")
+
 
 
 
