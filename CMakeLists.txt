@@ -51,6 +51,7 @@ include(${BASE_LOCATION}/toolchain/efm32-base.cmake)
 include_directories(${BASE_LOCATION}/include)
 
 
+# Subpprojects
 add_subdirectory("source/blink/")
 
 
