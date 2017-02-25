@@ -29,7 +29,7 @@ project(${TARGET} C CXX ASM)
 
 # Set device
 if(NOT DEVICE)
-set(DEVICE EFM32GG990F1024)
+set(DEVICE EFM32TG840F32)
 endif()
 
 # Set build
