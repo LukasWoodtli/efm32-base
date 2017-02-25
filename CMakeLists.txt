@@ -50,16 +50,12 @@ include(${BASE_LOCATION}/toolchain/efm32-base.cmake)
 # Add project headers
 include_directories(${BASE_LOCATION}/include)
 
-# Add project sources
-set(SOURCES
-	source/main.c
-)
 
-##### Outputs #####
+add_subdirectory("source/blink/")
 
-# Generate executable and link
-add_executable(${TARGET} ${SOURCES})
-target_link_libraries(${TARGET} ${LIBS})
+
+
+
 
 ##### Post build #####
 
