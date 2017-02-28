@@ -22,13 +22,18 @@ include(${BASE_LOCATION}/toolchain/arm-gcc.cmake)
 ##### Project Setup #####
 
 # Set our output target
-set(TARGET efm32-test)
+set(TARGET FreeRtosExamples)
 
 # Configure project and languages
 project(${TARGET} C CXX ASM)
 
 # Set device
 set(DEVICE EFM32TG840F32)
+
+add_definitions(-DEFM32TG840F32)
+add_definitions(-DGCC_ARMCM3)
+add_definitions(-DDEBUG)
+add_definitions(-DDEBUG_EFM)
 
 
 # Set build
@@ -42,17 +47,25 @@ endif()
 # or manually included here.
 
 # Add base libs (emlib, CMSIS, device files)
+
+include(${BASE_LOCATION}/bsp/bsp.cmake)
+
+include(${BASE_LOCATION}/emdrv/emdrv.cmake)
+
 include(${BASE_LOCATION}/toolchain/efm32-base.cmake)
+
+include(${BASE_LOCATION}/CMSIS/cmsis.cmake)
+
+include(${BASE_LOCATION}/FreeRTOS/freertos.cmake)
+
 
 ##### Files #####
 
-# Add project headers
-include_directories(${BASE_LOCATION}/include)
 
 
-# Subpprojects
-add_subdirectory("source/blink/")
-
+# Subprojects
+#add_subdirectory("source/blink/")
+add_subdirectory("source/STK3300_freertos_blink/")
 
 
 
