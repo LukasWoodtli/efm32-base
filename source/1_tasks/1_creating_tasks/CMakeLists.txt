@@ -8,6 +8,6 @@ set(SOURCES
 
 # Generate executable and link
 add_executable(${TARGET} ${SOURCES})
-message(${LIBS})
+
 target_link_libraries(${TARGET} ${LIBS})
 

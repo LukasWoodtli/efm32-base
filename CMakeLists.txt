@@ -63,9 +63,8 @@ include(${BASE_LOCATION}/FreeRTOS/freertos.cmake)
 
 
 
-# Subprojects
-#add_subdirectory("source/blink/")
-add_subdirectory("source/STK3300_freertos_blink/")
+# projects
+add_subdirectory("source")
 
 
 
