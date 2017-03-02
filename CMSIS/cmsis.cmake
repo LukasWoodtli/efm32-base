@@ -1,9 +1,5 @@
-# CMSIS CMake file
-#
-# Configures the emlib and adds it to the build
+#CMSIS cmake inclusion file
+#Adds CMSIS headers to the build
 
-##### Files #####
-
-# Headers
+#Add the header inclusion
 include_directories(${CMAKE_CURRENT_LIST_DIR}/Include)
-
