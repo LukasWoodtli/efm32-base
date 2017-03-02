@@ -54,7 +54,7 @@ include(${BASE_LOCATION}/emdrv/emdrv.cmake)
 
 include(${BASE_LOCATION}/toolchain/efm32-base.cmake)
 
-include(${BASE_LOCATION}/CMSIS/cmsis.cmake)
+include(${BASE_LOCATION}/cmsis/cmsis.cmake)
 
 include(${BASE_LOCATION}/FreeRTOS/freertos.cmake)
 

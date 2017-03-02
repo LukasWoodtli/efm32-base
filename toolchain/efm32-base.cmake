@@ -38,7 +38,7 @@ endif()
 
 # Include libraries
 include(${CMAKE_CURRENT_LIST_DIR}/../device/device.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/../CMSIS/cmsis.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../cmsis/cmsis.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/../emlib/emlib.cmake)
 
 # Set compiler flags
